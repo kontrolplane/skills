@@ -1,12 +1,8 @@
-# Skills
+# kontrolplane/skills
 
-A collection of skills for cloud, devops and platform engineering tooling.
+A collection of skills for cloud, devops and platform engineering tooling. Skills are markdown files that provide AI coding assistants with domain-specific knowledge. They help with gotchas, patterns, and troubleshooting that aren't always obvious from documentation alone.
 
-## What are Skills?
-
-Skills are markdown files that provide AI coding assistants with domain-specific knowledge. They help with gotchas, patterns, and troubleshooting that aren't always obvious from documentation alone.
-
-## Included Skills
+## included skills
 
 | Skill | Description |
 |-------|-------------|
@@ -18,40 +14,13 @@ Skills are markdown files that provide AI coding assistants with domain-specific
 | **prometheus** | PromQL queries, rate/histogram functions, alerting and recording rules |
 | **terraform** | HCL patterns, state management, count vs for_each, module composition |
 
-## Installation
+## installation
 
 ```bash
 npx skills kontrolplane/skills
 ```
 
-## Skill Format
-
-Each skill is a directory containing a `SKILL.md` file with YAML frontmatter and markdown content:
-
-```
-skills/
-├── kubernetes/
-│   └── SKILL.md
-├── terraform/
-│   └── SKILL.md
-└── ...
-```
-
-```markdown
----
-name: kubernetes
-description: Kubernetes resource configuration and troubleshooting. Use when...
----
-
-# Kubernetes
-
-## Pod Failure Troubleshooting
-...
-```
-
-See the [Agent Skills specification](https://agentskills.io) for format details.
-
-## Skill Philosophy
+## skill philosophy
 
 These skills focus on:
 
@@ -66,22 +35,20 @@ They intentionally avoid:
 - Tutorial-style introductions (assumes working knowledge)
 - Exhaustive API documentation
 
-## Contributing
-
-### Adding a Skill
+## contributing
 
 1. Create a directory: `skills/<skill-name>/`
 2. Add `SKILL.md` with frontmatter and content
 3. Focus on gotchas, patterns, and troubleshooting
 
-### Content Guidelines
+### content guidelines
 
 - **Focus on gotchas** — What trips people up? What's non-obvious?
 - **Include targeted commands** — CLI commands belong when they're part of a debugging workflow
 - **Keep it scannable** — Tables, code blocks, and short sections work better than prose
 - **Keep `SKILL.md` concise** — Move detailed reference to supporting files if needed
 
-### Supporting Files
+### supporting files
 
 Skills can include additional files for templates, examples, or scripts:
 
